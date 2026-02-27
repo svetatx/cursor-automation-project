@@ -1,0 +1,37 @@
+# Node and npm
+node_modules/
+package-lock.json
+package.json
+
+# Python cache and virtual env
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editor and OS files
+.vscode/
+.DS_Store# Node and npm
+node_modules/
+package-lock.json
+package.json
+
+# Python cache and virtual env
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editor and OS files
+.vscode/
+.DS_Store# Node and npm
+node_modules/
+package-lock.json
+package.json
+
+# Python cache and virtual env
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editor and OS files
+.vscode/
+.DS_Store
