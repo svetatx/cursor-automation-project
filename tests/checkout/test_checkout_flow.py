@@ -1,17 +1,15 @@
-"""Checkout flow tests."""
-
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
 from pages.checkout_page import CheckoutPage
-from data.users import BASE_URL, USERS
+from data.users import StandardUser
 
 
 def _start_checkout_with_single_item(page) -> CheckoutPage:
     """Shared setup: login, add one item to cart, navigate to checkout step one."""
     login = LoginPage(page)
-    login.open(BASE_URL)
-    login.login(USERS["standard"]["username"], USERS["standard"]["password"])
+    login.open()
+    login.login(StandardUser.username, StandardUser.password)
 
     inventory = InventoryPage(page)
     inventory.wait_for_products()

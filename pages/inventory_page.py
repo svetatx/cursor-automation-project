@@ -1,12 +1,9 @@
-"""Inventory / product listing page object."""
-
-from pages.base_page import BasePage
-from data.constants import INVENTORY_LIST_SELECTOR, INVENTORY_ITEM_SELECTOR
+from playwright.sync_api import Page
 
 
-class InventoryPage(BasePage):
-    def __init__(self, page):
-        super().__init__(page)
+class InventoryPage:
+    def __init__(self, page: Page):
+        self.page = page
         self.inventory_list = page.locator(INVENTORY_LIST_SELECTOR)
         self.inventory_items = page.locator(INVENTORY_ITEM_SELECTOR)
         self.cart_link = page.locator(".shopping_cart_link")

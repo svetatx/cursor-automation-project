@@ -1,15 +1,13 @@
-"""Shopping cart tests."""
-
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
-from data.users import BASE_URL, USERS
+from data.users import StandardUser
 
 
 def test_add_product_to_cart_and_view(page):
     login = LoginPage(page)
-    login.open(BASE_URL)
-    login.login(USERS["standard"]["username"], USERS["standard"]["password"])
+    login.open()
+    login.login(StandardUser.username, StandardUser.password)
 
     inventory = InventoryPage(page)
     inventory.wait_for_products()

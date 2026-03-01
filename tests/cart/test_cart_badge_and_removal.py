@@ -1,16 +1,14 @@
-"""Cart badge and add/remove behavior tests."""
-
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
-from data.users import BASE_URL, USERS
+from data.users import StandardUser
 
 
 def login_and_open_inventory(page) -> InventoryPage:
     """Helper to log in and land on the inventory page."""
     login = LoginPage(page)
-    login.open(BASE_URL)
-    login.login(USERS["standard"]["username"], USERS["standard"]["password"])
+    login.open()
+    login.login(StandardUser.username, StandardUser.password)
 
     inventory = InventoryPage(page)
     inventory.wait_for_products()

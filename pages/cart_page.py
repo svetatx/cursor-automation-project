@@ -1,9 +1,7 @@
-"""Shopping cart page object."""
-
-from pages.base_page import BasePage
+from playwright.sync_api import Page
 
 
-class CartPage(BasePage):
+class CartPage(Page):
     def __init__(self, page):
         super().__init__(page)
         self.cart_list = page.locator(".cart_list")

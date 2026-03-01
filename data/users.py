@@ -1,7 +1,7 @@
-BASE_URL = "https://www.saucedemo.com/v1/index.html"
+class StandardUser:
+    username = "standard_user"
+    password = "secret_sauce"
 
-USERS = {
-    "standard": {"username": "standard_user", "password": "secret_sauce"},
-    "locked": {"username": "locked_out_user", "password": "secret_sauce"},
-}
-
+class LockedUser:
+    username = "locked_out_user"
+    password = "secret_sauce"

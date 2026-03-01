@@ -1,9 +1,7 @@
-"""Checkout flow page object (steps one, two, complete)."""
-
-from pages.base_page import BasePage
+from playwright.sync_api import Page
 
 
-class CheckoutPage(BasePage):
+class CheckoutPage(Page):
     def __init__(self, page):
         super().__init__(page)
         # Use stable data-test attributes that match the live Saucedemo app
